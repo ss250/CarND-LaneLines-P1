@@ -40,7 +40,7 @@ My pipeline consisted of 7 steps.
 
 6. The next step is to split the line segments detected in the hough transform into two groups, one for the left line and one for the right. 
 
-7. In order to draw a single line on the left and right lanes, I used a line of best fit for each side of the image, using the points from both ends of the line segments. 
+7. In order to draw a single line on the left and right lanes, I used a line of best fit for each side of the image, using the points from both ends of the line segments. The x,y coordinates of both ends of the line segments were derived from the slope and constant returned from numpy's polyfit function. A first degree fit was used. 
 
 ### 2. Potential Shortcomings of the pipeline
 
