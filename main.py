@@ -118,8 +118,8 @@ def main():
     images = os.listdir("test_images/")
     videos = os.listdir("test_videos/")
 
-    for image_file in images:
-        test_image("test_images/" + image_file)
+#     for image_file in images:
+#         test_image("test_images/" + image_file)
 
     for video_file in videos:
         test_video(video_file)
