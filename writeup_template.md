@@ -30,11 +30,11 @@ My pipeline consisted of 7 steps.
 
 3. A Canny edge detector was then applied with a low threshold of 75 and a high threshold of 225
 
-![alt text][image3]
+![alt text][image4]
 
 4. Next, two masks were applied to the image, one large trapezoid and one smaller trapezoid within the first, to mask as much of the image as possible without covering any of the lanes in the image. This was tested on the videos by drawing the polygon itself onto the video.
 
-![alt text][image4]
+![alt text][image3]
 
 5. A hough transform was applied to the image next. I chose a rho of 2 pixels and a theta of (pi/180)\*2 radians. My threshold was set to 20 votes, and the mininum line length and maximum line gap is 10 and 75 respectively. 
 
