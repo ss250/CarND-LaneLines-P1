@@ -17,9 +17,9 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./examples/grayscale.jpg "Grayscale"
-[image2]: ./reference_images/Gaussian_blue.jpg "Gaussian"
-[image3]: ./reference_images/masked.jpg "Masked"
-[image4]: ./reference_images/Canny.jpg "Canny"
+[image2]: ./reference_images/Gaussian_blue.png "Gaussian"
+[image3]: ./reference_images/masked.png "Masked"
+[image4]: ./reference_images/Canny.png "Canny"
 
 ---
 
@@ -29,12 +29,16 @@ The goals / steps of this project are the following:
 
 My pipeline consisted of 6 steps. 
 1. The image was converted to grayscale
+
 ![alt text][image1]
 2. Then a gaussian blur was applied. I chose a kernel size of 3 as opposed to 5 because the image was already quite blurry
+
 ![alt text][image2]
 3. A Canny edge detector was then applied with a low threshold of 75 and a high threshold of 225
+
 ![alt text][image3]
 4. Next, two masks were applied to the image, one large trapezoid and one smaller trapezoid within the first, to mask as much of the image as possible without covering any of the lanes in the image. This was tested on the videos by drawing the polygon itself onto the video.
+
 ![alt text][image4]
 5. A hough transform was applied to the image next. I chose a rho of 2 pixels and a theta of (pi/180)\*2 radians. My threshold was set to 20 votes, and the mininum line length and maximum line gap is 10 and 75 respectively. 
 6. The next step is to split the line segments detected in the hough transform into two groups, one for the left line and one for the right. 
